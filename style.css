@@ -1,0 +1,444 @@
+/* Apply styles to the entire body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Define the container styles */
+.mobile-screen-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: -webkit-fill-available;
+    background-image: url(/images/mobile_UI1.jpg);
+    background-size: cover;
+    background-repeat: round;
+
+}
+
+@media (max-width: 480px) {
+    .mobile-screen-container {
+        padding: 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .weather_title #maintitle {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .weather_title #destitle {
+        font-size: 12px;
+    }
+
+    .w_info #weather_icn {
+        width: 35px;
+        height: 30px;
+    }
+
+    .wtemp #temptitle {
+        font-size: 25px;
+    }
+
+    #degtitle {
+        font-size: 10px;
+        margin-top: -2px;
+    }
+
+    .feels_liketitle span {
+        font-size: 14px;
+    }
+
+    .feels_liketitle #feels_deg {
+        font-weight: 600;
+    }
+
+    .wicons .w_icons {
+        width: 15px;
+        height: 15px;
+    }
+
+    .wicons .wicon_title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .wicons .wicon_des {
+        font-size: 10px;
+        color: lightgrey;
+        margin-top: 3px;
+    }
+
+    .nowtxt {
+        font-size: 14px;
+    }
+
+    .col1 img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .weekdays-container .weekdays {
+        height: 18vh;
+    }
+
+    .w_box .wd_1 .days {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .w_box .wd_1 .dates {
+        font-size: 10px;
+    }
+
+    .wd_1 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .wd_1 .days_temp {
+        font-size: 14px;
+    }
+
+    .daytitle span {
+        font-weight: 800;
+    }
+}
+
+
+#maintitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#destitle {
+    font-size: 12px;
+}
+
+#weather_icn {
+    width: 40px;
+    height: 35px;
+}
+
+#temptitle {
+    font-size: 22px;
+}
+
+#degtitle {
+    font-size: 10px;
+}
+
+.feels_liketitle {
+    font-size: 14px;
+}
+
+/* Add styles for content within the container */
+.container-content {
+    height: -webkit-fill-available;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    padding: 5px;
+    color: #fff;
+}
+
+.datetimebar {
+    display: flex;
+    justify-content: center;
+    padding-inline: 5px;
+    align-items: center;
+    margin-top: 0.1rem;
+    padding: 0;
+}
+
+.rise_set {
+    width: 100%;
+    border: 1px solid rgba(225, 225, 225, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 50px 0 50px;
+    padding: 5px;
+    padding-inline: 1rem;
+    border-left: dotted;
+    border-right: dotted;
+    border-left-color: #f4cc67;
+    border-right-color: #ee6d3d;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.rise_set .rise {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 10px;
+}
+
+.rise_set .set {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 10px;
+}
+
+.sec1 .citytitle {
+    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(225,225,225,0.3); */
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding-inline: 15px;
+    padding-block: 5px;
+    border: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.searchbar {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.searchbar input {
+    background: transparent;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    outline: none;
+    color: #fff;
+}
+
+.searchbar input:focus {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+}
+
+input:-internal-autofill-selected {
+    appearance: initial;
+    /* Reset appearance to default */
+    background-image: none;
+    /* Remove background image */
+    background-color: transparent !important;
+    /* Set your own background color */
+    color: transparent !important;
+    /* Set your own text color */
+}
+
+.searchbar input::placeholder {
+    color: #d0d0d0;
+}
+
+.searchbar i {
+    position: absolute;
+    right: 31%;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.innersec1 {
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+    margin-top: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(225,225,225,0.3); */
+    border-radius: 30px;
+    border: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.sec1 {
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.sec2 {
+    height: 21%;
+    /* background: rgba(0,0,0,0.3); */
+    background: rgba(225, 225, 225, 0.3);
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 1rem;
+    border: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.under1 {
+    /* height: 100%; */
+    width: 50%;
+    /* background: rgba(0, 0, 0, 0.7); */
+    background: rgba(225, 225, 225, 0.3);
+    border-radius: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(225, 225, 225, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.under2 {
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+}
+
+.w_icons {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 0.3rem;
+}
+
+.wicon_title {
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+.wicon_des {
+    font-size: 10px;
+    color: lightgrey;
+    margin-top: 3px;
+}
+
+/* sec1 */
+
+.daytitle {
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.wd_1 {
+    background: rgba(0, 0, 0, 0.3);
+    background: rgba(225, 225, 225, 0.3);
+    border-radius: 30px;
+    /* width: 50%; */
+    height: 76%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 20px;
+    border: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+
+.wd_1 .days {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wd_1 .dates {
+    font-size: 12px;
+}
+
+.w_box {
+    min-width: 70px;
+    margin-left: 2rem;
+}
+
+.weekdays-container {
+    width: 100%;
+    height: 24%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(225,225,225,0.3); */
+    padding-top: 16px;
+    border-radius: 30px;
+    /* padding-inline: 5px; */
+    border: 1px solid rgba(225, 225, 225, 0.5);
+    margin-top: 1rem;
+    /* Prevent line breaks between weekdays */
+}
+
+.weekdays-container::-webkit-scrollbar {
+    width: 0;
+    /* Set the width of the scrollbar to zero for WebKit (Chrome, Safari) */
+}
+
+.weekdays {
+    display: flex;
+    height: 20vh;
+
+}
+
+.weekday {
+    padding: 10px;
+    /* Add spacing between weekdays */
+    border: 1px solid #ccc;
+    /* Add borders for separation (optional) */
+    min-width: 100px;
+    /* Set a minimum width for each weekday */
+}
+
+.wd_1 #days_temp1 {
+    color: rgb(111 193 249);
+}
+
+.row1 {
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    scrollbar-width: none;
+    /* Hide default scrollbar for Firefox */
+    -ms-overflow-style: none;
+
+    display: flex;
+    height: 70%;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 10px;
+    padding-top: 10px;
+
+    /* margin-bottom: 24px; */
+    border: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.row1::-webkit-scrollbar {
+    width: 0;
+    /* Set the width of the scrollbar to zero for WebKit (Chrome, Safari) */
+}
+
+/* Media Query */
+
+.current-hour {
+    width: 12%;
+    /* background: rgba(0,0,0,0.3); */
+    background: rgba(225, 225, 225, 0.2);
+    border: 1px solid rgba();
+    border: 1px solid rgba(225, 225, 225, 0.5);
+    backdrop-filter: blur(1rem);
+    border-radius: 10px;
+    padding: 5px;
+
+}
