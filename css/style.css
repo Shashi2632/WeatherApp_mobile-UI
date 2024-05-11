@@ -20,7 +20,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     height: -webkit-fill-available;
-    background-image: url(/images/mobile_UI1.jpg);
+    background-image: url(../images/mobile_UI1.jpg);
     background-size: cover;
     background-repeat: round;
 
